@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MMaevie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href='css/bootstrap.min.css' rel="stylesheet" type="text/css">
+  
+  <style type="text/css">
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #home-page {
+        background-image: url('主視覺.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+	 
+	 #brain-page {
+        background-image: url('主視覺-02.png'); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+	#hand-page {
+        background-image: url('主視覺-03.png'); 
+        background-repeat: no-repeat ;
+        background-attachment: fixed ;
+        background-position: center ;
+        background-size: cover ;
+    }
+	  
+    #hand-page .position-absolute {
+    }
+    
+    #hand-page .position-absolute:hover {
+        z-index: 99 !important; 
+    }
+
+    #hand-page .position-absolute img {
+        transition: transform 0.3s ease-in-out !important;
+    }
+
+    #hand-page .position-absolute:hover img {
+        transform: scale(1.15) !important; 
+        filter: brightness(1.15) !important; 
+    }
+
+    @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); } 
+        100% { transform: translateY(0px); }
+    }
+
+    .css-float {
+        animation: floating 3.5s ease-in-out infinite;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- =================【首頁】================= -->
+  <div id="home-page" class="position-relative vh-100 w-100">
+
+
+    <div class="position-absolute top-50 start-50 translate-middle text-center" 
+         style="width: 35%; margin-top: -60px; margin-left: -60px;">   
+      <div class="position-relative">
+        <button class="border-0 bg-transparent p-0 w-100" id="about-tab" type="button" onclick="switchToBrainPage()">
+          <img src='大腦.png' class="img-fluid" alt="Brain">
+        </button>
+      </div>
+    </div>
+
+    <div class="position-absolute bottom-0 start-0 m-5 text-center" style="width: 22%;">
+      <button class="border-0 bg-transparent p-0 w-100" id="works-tab" type="button" onclick="switchToHandPage()">
+        <img src='手.png' class="img-fluid" alt="Dog">
+      </button>
+    </div>
+
+    <div class="position-absolute bottom-0 end-0 m-4 text-center" style="width: 28%;">
+      <div class="d-flex flex-column align-items-center">
+        <button class="border-0 bg-transparent p-0 w-100" id="info-tab" data-bs-toggle="modal" data-bs-target="#info-modal" type="button">
+          <img src='心臟.png' class="img-fluid" style="max-width:100%;" alt="Cat">
+        </button>
+      </div>
+    </div>
+
+  </div> 
+
+
+  <!-- =================【大腦頁面】================= -->
+<div id="brain-page" class="min-vh-100 text-black p-4 p-md-5 position-relative" style="display: none">
+  <button class="btn btn-outline-dark btn-sm position-absolute top-0 start-0 m-4 m-md-5" onclick="switchToHome()">★ Back</button>
+  
+  <div class="container py-5 mt-4">
+    <div class="row gy-4 align-items-center">
+      
+      <div class="col-12 col-md-5 text-center text-md-start">
+        <img src='IMG_8882.jpg' class="img-fluid shadow-lg border border-1 border-secondary" style="max-height: 70vh; object-fit: cover;" alt="Xing Chen">
+      </div>
+      
+      
+<div class="col-12 col-md-7 ps-md-5 custom-scrollbar" 
+     style="font-family: 'Courier Prime', monospace; max-height: 70vh; overflow-y: auto;">
+  
+  <div class="mb-4 text-start">
+    <img src='字.png' class="img-fluid d-block" style="width: 50%;" alt="Maevie">
+  </div>
+	
+	<p class="fs-5 text-dark" style="line-height: 1.6;">
+	22歲，現居台灣台中市，射手座，INTP。
+  </p>
+  <p class="fs-5 text-dark" style="line-height: 1.6;">
+    擅長領域:廣告創意發想、社群經營、平面設計
+  </p>
+  <p class="fs-5 text-dark" style="line-height: 1.6;">
+    Maevie (She/her) is an student based in Taichung, Taiwan, Studying in the Department of Advertising and Communication.22 years old; Sagittarius; INTP.
+	Areas of expertise: Advertising concept development, social media management, and graphic design.
+  </p>
+	
+  <p class="fs-5 text-dark" style="line-height: 1.6;">
+  ⢠⠋⠙⠲⠔⠒⠒⠒⠒⠒⠦⠒⠉⢳⠀⠀
+⠀  ⣸⠀⠀⠀⠀⠀⠀⠀⠀   ⠀⠀⡇⠀
+   ⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⠀
+  ⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀
+  ⢣⡀⸝⸝› ̫ ‹⸝⸝⠀ ⢀⠎⠀
+⠀  ⠙⠢⢄⣀⣀⣀⣀⣀⣀⣀⡤⠖⠁
+⠀⠀⠀⠀⠀⠀⠀ ⢀⠄⠄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⡀⠤⠄⠂⠀⢸⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠢⡀⠀౨ৎ⠀⠈⠐⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⠁⢀⣀⠀⠀⡖⠈⠀
+⠀⠀⠀⠀⠀   ⠀⠉⠁⠀⠑⠤⠃⠀⠀
+  </p>
+  
+</div>     
+    </div>
+  </div>
+</div>
+
+
+  <!-- =================【手頁面】================= -->
+
+<div id="hand-page" class="min-vh-100 w-100 text-white position-relative overflow-x-hidden" style="display: none; padding-bottom: 100px;">
+  <button class="btn btn-outline-light btn-sm position-absolute top-0 start-0 m-4 m-md-5" style="z-index: 10;" onclick="switchToHome()">★ Back</button>
+
+  <div class="position-absolute css-float text-center" style="top: 15%; left: 10%; width: 9%;">
+    <img src='my work 1.png' class="img-fluid mb-2" alt="Post-Cosmos">
+    <div style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #fff;">[Illustrator] ✦龍年紅包袋✦</div>
+  </div>
+
+
+  <div class="position-absolute css-float text-center" style="top: 12%; left: 24%; width: 13%;">
+    <img src='my work 3.png' class="img-fluid " alt="Illustration">
+    <div style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #fff;">[Illustrator]✦文創貼紙✦</div>
+  </div>
+
+  <div class="position-absolute css-float text-center" style="top: 34%; left: 39%; width: 30%;">
+    <img src='my work 4.png' class="img-fluid mb-2" alt="Void Species">
+    <div style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #fff;">[Photoshop]✦照片編輯與排版✦</div>
+  </div>
+
+  <div class="position-absolute css-float text-center" style="top: 15%; left: 65%; width: 18%;">
+    <img src='my work 5.png' class="img-fluid mb-2" alt="Pick Your Character">
+    <div style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #fff;">[Illustrator]✦Diary✦</div>
+  </div>
+
+  <div class="position-absolute css-float text-center" style="top: 40%; left: 71%; width: 20%;">
+    <img src='my work 6.png' class="img-fluid mb-2" alt="Blackhole Giant">
+    <div style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #fff;">[Procreate]✦Kpop應援設計✦</div>
+  </div>
+
+  <div class="position-absolute css-float text-center" style="top: 65%; left: 30%; width: 10%;">
+    <img src='my work 2.png' class="img-fluid mb-2" alt="UFO">
+	<div style="font-family: 'Courier Prime', monospace; font-size: 12px; color: #fff;">[Illustrator]✦20's Birthday✦</div>
+  </div>
+</div>
+</div>
+    
+  <!-- =================【心臟頁面】================= -->
+  <div class="modal fade" id="info-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0 text-center position-relative">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <img src='more info.png' class="img-fluid mx-auto" style="max-height: 85vh; object-fit: contain;" alt="疊加圖片">
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../../Downloads/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/jquery-4.0.0.min.js"></script> 
+  <script src="../../Downloads/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script> 
+  <script>
+    function switchToBrainPage() {
+      document.getElementById('home-page').style.display = 'none';
+      document.getElementById('hand-page').style.display = 'none'; 
+      document.getElementById('brain-page').style.display = 'block';
+      window.scrollTo(0, 0); 
+    }
+
+    function switchToHandPage() {
+      document.getElementById('home-page').style.display = 'none';
+      document.getElementById('brain-page').style.display = 'none'; 
+      document.getElementById('hand-page').style.display = 'block';
+      window.scrollTo(0, 0); 
+    }
+
+    function switchToHome() {
+      document.getElementById('brain-page').style.display = 'none';
+      document.getElementById('hand-page').style.display = 'none';
+      document.getElementById('home-page').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
